@@ -97,6 +97,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiTest.cs" />
     <Compile Include="ConvertersTest.cs">
       <SubType>Code</SubType>
     </Compile>
