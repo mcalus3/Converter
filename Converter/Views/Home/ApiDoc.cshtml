@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "ApiDoc";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2><strong>Converter</strong></h2>
+<p>Converts plain text to document with words in sentences sorted.</p>
+<ul>
+    <li>
+        <p><strong>URL</strong></p>
+        <p>/api/converter/:type</p>
+    </li>
+    <li>
+        <p><strong>Method:</strong></p>
+        <p><code>POST</code></p>
+    </li>
+    <li>
+        <p><strong>URL Params</strong></p>
+        <p><strong>Required:</strong></p>
+        <p><code>type=[string](csv,xml)</code></p>
+    </li>
+    <li>
+        <p><strong>Data Params</strong></p>
+        <p>text/plain: text to be converted</p>
+    </li>
+    <li>
+        <p><strong>Success Response:</strong></p>
+        <ul>
+            <li>
+                <strong>Code:</strong> 200 <br>
+                <strong>Content:</strong> <code>converted document in plain text</code>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <p><strong>Error Response:</strong></p>
+        <ul>
+            <li>
+                <strong>Code:</strong> 400 Bad Request <br>
+                <strong>Content:</strong> <code>{ message : "Document type ":type" is not supported." }</code>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <p><strong>Sample Call:</strong></p>
+        <div class="highlight highlight-source-js">
+            <pre>url<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>/api/converter/csv<span class="pl-pds">"</span></span>,
+dataType<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>text/plain<span class="pl-pds">"</span></span>,
+type <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>POST<span class="pl-pds">"</span></span>,
+body <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Mary had a little lamb. Peter called for the wolf, and Aesop came.<span class="pl-pds">"</span></span>
+</pre>
+        </div>
+    </li>
+</ul>

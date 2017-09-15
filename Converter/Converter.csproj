@@ -132,12 +132,14 @@
     <Compile Include="App_Start\TextMediaTypeFormatter.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ConverterController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\CsvSortedDocument.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Models\IndexViewModel.cs" />
     <Compile Include="Models\SortedDocument.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -234,6 +236,8 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\ApiDoc.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

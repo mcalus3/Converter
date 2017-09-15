@@ -1,0 +1,29 @@
+﻿@using Converter.Models
+@model IndexViewModel
+
+@{
+    ViewBag.Title = "Document Converter";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h3>You can convert your document here from plain text to CSV od XML documents.</h3>
+<h4>Oh, and we will sort words in each sentence for you.</h4>
+
+@using (Html.BeginForm())
+{
+    <p>
+        Input your text here: <br />
+        @Html.TextAreaFor(m => m.PlainText)
+    </p>
+    <p>
+        csv: @Html.RadioButtonFor(m => m.Type, "csv", true)
+        xml: @Html.RadioButtonFor(m => m.Type, "xml", false)
+    </p>
+    <p>
+        <input type="submit" value="convert" />
+    </p>
+}
+converted and sorted document:<br />
+@Html.TextAreaFor(m => m.ConvertedDocument)
+<p>
+    @Html.ActionLink("WebApi documentaion", "ApiDoc")
+</p>
